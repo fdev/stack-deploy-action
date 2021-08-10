@@ -7,7 +7,7 @@ inputs:
   server:
     description: 'Stack server'
     default: 'stack.fdev.nl'
-    required: true
+    required: false
   ssh-key:
     description: 'SSH key used to connect'
     required: true
