@@ -1,4 +1,4 @@
-# Stack Deploy Action
+# Stack Deploy Action :rocket:
 
 Triggers a deploy of an app on a Stack server. 
 
@@ -19,11 +19,10 @@ jobs:
           ssh-key: ${{ secrets.STACK_SSH_KEY }}
 ```
 
-### Inputs
+## Inputs
 
-The input
-
-- `app`: Name of the app. (required)
-- `server`: Stack server where the app should be deployed. (default: **'stack.fdev.nl'**, required)
-- `ssh-key`: Private SSH key used to connect to the server. (required)
-
+| Name | Description | Required | Default value |
+| --- | --- | :-: | --- |
+| `app` | Name of the app. | :heavy_check_mark: |
+| `server` | Stack server where the app should be deployed. | :x: | `'stack.fdev.nl'` |
+| `ssh-key` | Private SSH key used to connect to the server. | :heavy_check_mark: |
