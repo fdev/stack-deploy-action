@@ -31,4 +31,4 @@ runs:
 
     - name: Deploy the application
       shell: bash
-      run: ssh stack 'deploy ${{ input.app }}'
+      run: ssh stack 'deploy ${{ inputs.app }}'
