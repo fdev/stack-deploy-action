@@ -27,6 +27,7 @@ runs:
           User deploy
           IdentityFile ~/.ssh/stack.key
           StrictHostKeyChecking no
+          UserKnownHostsFile /dev/null
         END
 
     - name: Deploy the application
