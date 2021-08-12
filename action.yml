@@ -28,6 +28,7 @@ runs:
           IdentityFile ~/.ssh/stack.key
           StrictHostKeyChecking no
           UserKnownHostsFile /dev/null
+          LogLevel ERROR
         END
 
     - name: Deploy the application
