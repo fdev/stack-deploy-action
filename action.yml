@@ -1,16 +1,19 @@
-name: 'Stack deploy'
-description: 'Deploy an application on a Stack server'
+name: "Stack deploy"
+description: "Deploy an application on a Stack server"
+author: "fdev"
+
 inputs:
   app:
-    description: 'Name of the app'
+    description: "Name of the app"
     required: true
   server:
-    description: 'Stack server'
-    default: 'stack.fdev.nl'
+    description: "Stack server"
+    default: "stack.fdev.nl"
     required: false
   ssh-key:
-    description: 'SSH key used to connect'
+    description: "SSH key used to connect"
     required: true
+
 runs:
   using: "composite"
   steps:
