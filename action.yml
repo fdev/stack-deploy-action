@@ -22,7 +22,9 @@ runs:
       shell: bash
       run: |
         mkdir -p ~/.ssh/
-        echo "${{ inputs.ssh-key }}" > ~/.ssh/stack.key
+        cat << END > ~/.ssh/stack.key
+        ${{ inputs.ssh-key }}
+        END
         chmod 600 ~/.ssh/stack.key
         cat >>~/.ssh/config <<END
         Host stack
