@@ -6,10 +6,12 @@ inputs:
   app:
     description: "Name of the app"
     required: true
+  services:
+    description: "Services to deploy (separated by spaces)"
+    required: false
   server:
     description: "Stack server"
-    default: "stack.fdev.nl"
-    required: false
+    required: true
   ssh-key:
     description: "SSH key used to connect"
     required: true
@@ -38,4 +40,4 @@ runs:
 
     - name: Deploy the application
       shell: bash
-      run: ssh stack 'deploy ${{ inputs.app }}'
+      run: ssh stack 'deploy ${{ inputs.app }} ${{ inputs.services }}'
